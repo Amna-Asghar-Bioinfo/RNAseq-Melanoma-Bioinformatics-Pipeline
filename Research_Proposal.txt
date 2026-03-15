@@ -1,0 +1,80 @@
+
+Research Proposal
+1. Study Title
+"Integrative Bioinformatics Pipeline for the Identification of Key Regulatory Pathways and
+Potential Therapeutic Targets in Metastatic Melanoma using GSE46517."
+2. Biological Problem & Research Background
+Metastatic melanoma is the most lethal skin cancer, causing over 72% skin cancer-related deaths
+due to its aggressive transition from benign nevi to primary and metastatic stages. By utilizing
+differential gene expression (DGE) analysis, we can identify "molecular switches" where up-
+regulated oncogenes act as drivers and down-regulated tumor suppressors act as brakes of
+disease progression. Mapping these genes to functional networks like the PI3K-Akt or MAPK
+pathways reveals the biological systems hijacked by cancer to survive and spread, ultimately
+enabling drug repurposing to provide rapid, targeted therapeutic options for advanced-stage
+patients.
+3. Main Research Question
+a. Which genes exhibit significant differential expression (P-value < 0.05, LogFC > 1) in
+the GSE46517 metastatic melanoma dataset?
+b. Which of these DEGs act as "hub genes" that most likely contribute to disease
+mechanisms?
+c. Which biological pathways (e.g., Pathways in Cancer, PI3K-Akt) are statistically
+associated with these genes?
+d. Can these specific genes or pathways be targeted using existing FDA-approved drugs
+identified via DGIdb?
+4. Study Objectives
+
+
+
+To identify significant Up-regulated and Down-regulated genes that characterize
+metastatic progression in the GSE46517 dataset.
+To perform Pathway Enrichment Analysis to identify biological systems (e.g.,
+Cytokine signaling, PI3K-Akt) associated with these genes.
+To prioritize Cancer-Specific Pathways that serve as the primary engines of tumor
+survival.
+To screen the DGIdb for potential therapeutic candidates (Inhibitors/Antagonists) for up-
+regulated "hub" genes.
+5. Methodology
+The pipeline was executed through five distinct stages:
+1. Data Acquisition: Retrieval of the GSE46517 transcriptomic profile from the NCBI
+Gene Expression Omnibus.
+2. Statistical Filtering: Genes are classified into up-regulated (LogFC > 1) or down-
+regulated (LogFC < -1) categories based on whether their expression levels significantly
+increase or decrease in the disease state compared to the control.
+3. Functional Annotation (DAVID): Using the DAVID resource to categorize genes into
+KEGG pathways.
+4. Target Prioritization: Narrowing results to 4 pathways directly involved in oncogenesis
+(e.g., Pathways in Cancer).
+5. Drug-Gene Interaction (DGIdb): Searching for FDA-approved inhibitors that can "turn
+off" the overexpressed genes found in the metastatic samples.
+6. Expected Results
+
+
+
+Identification of Hub Genes: Discovery of key drivers such as CXCL8, CDK2, or
+PIK3CD.
+Pathway Mapping: Visualizing how these genes disrupt normal cellular functions in
+melanoma.
+Therapeutic Candidates: A list of actionable drugs (e.g., Dabrafenib, Dinaciclib) that
+match the genetic profile of the patient.
+7. Significance of the Study
+This study advances Precision Oncology by:
+
+
+
+Providing a molecular rationale for personalized treatment based on Stage-Specific gene
+expression.
+Identifying potential biomarkers for early detection of metastatic potential.
+Supporting future research by highlighting which molecular pathways are the most
+promising targets for clinical trials.
+Research Hypothesis & Biological Interpretation
+Analysis of the GSE46517 dataset reveals a significant transcriptomic shift where 2,297 DEGs
+drive the malignant transition from benign nevi to metastatic melanoma. This progression is
+characterized by the robust up-regulation of cell cycle regulators and the downregulation of
+extracellular matrix stability genes, effectively hijacking the PI3K-Akt and MAPK signaling
+pathways to favor uncontrolled proliferation and metastasis. Cyclinon these results, we
+hypothesize that targeted pharmacological intervention using Dinaciclib to inhibit overexpressedcyclin-dependent kinases and Dabrafenib to modulate dysregulated MAPK signaling will
+disrupt the metastatic cascade and restore cellular equilibrium. This precision-medicine strategy
+is biologically justified by the significant P-values< 0.05 and the clear directional shift in
+LogFC values observed in the metastatic samples, confirming these genes as functional
+therapeutic targets.
+.
