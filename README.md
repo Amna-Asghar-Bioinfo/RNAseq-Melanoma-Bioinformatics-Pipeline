@@ -1,57 +1,73 @@
-🧬 Metastatic Melanoma: Integrative RNA-Seq & Drug Repurposing Pipeline
+# Metastatic Melanoma: Integrative RNA-Seq & Drug Repurposing Pipeline
 
-This project presents a comprehensive bioinformatics workflow developed to analyze transcriptomic data from metastatic melanoma. By integrating differential expression analysis with clinical drug databases, the study identifies high-confidence therapeutic targets and FDA-approved candidates for precision oncology.
-📊 Dataset Detail
+A comprehensive bioinformatics workflow analyzing transcriptomic data from metastatic melanoma.
+Integrates differential expression analysis with clinical drug databases to identify
+high-confidence therapeutic targets and FDA-approved candidates for precision oncology.
 
-    Dataset ID: GSE46517
+---
 
-    Source: NCBI Gene Expression Omnibus (GEO)
+## Dataset
 
-    Description: Gene expression profiles of metastatic melanoma progression models.
+| Field       | Detail                                                              |
+|-------------|---------------------------------------------------------------------|
+| Dataset ID  | GSE46517                                                            |
+| Source      | NCBI Gene Expression Omnibus (GEO)                                  |
+| Description | Gene expression profiles of metastatic melanoma progression models  |
 
-🚀 The Pipeline
+---
 
-The workflow was executed using a combination of statistical filtering and cross-database validation:
+## Pipeline
 
-    Data Acquisition: Retrieval and preprocessing of transcriptomic profiles from GEO.
+01 — Data Acquisition
+Retrieval and preprocessing of transcriptomic profiles from the NCBI Gene Expression Omnibus.
 
-    Differential Expression Analysis (DEA):
+02 — Differential Expression Analysis
+Statistical filtering to identify 2,297 differentially expressed genes.
+Thresholds: P-value < 0.05 and |Log2FC| > 2.
 
-        Thresholds: P-value<0.05 and ∣Log2​FC∣>2.
+03 — Functional Annotation
+Gene ontology and functional enrichment analysis via DAVID.
 
-        Total Identified: 2,297 DEGs.
+04 — Pathway Mapping
+Systemic dysregulation mapped through KEGG pathway analysis.
 
-    Functional Annotation: Gene ontology and functional analysis via DAVID.
+05 — Hub Gene Identification
+Isolation of key regulatory drivers critical for metastatic progression.
+Identified: CXCL8, CDK2, PIK3CD.
 
-    Pathway Mapping: Identifying systemic dysregulation through KEGG pathways.
+06 — Clinical Drug Screening
+Cross-database validation against DGIdb and ChEMBL, filtered exclusively
+for FDA-approved compounds to ensure clinical relevance.
 
-    Target Identification: Isolation of "Hub Genes" (e.g., CXCL8, CDK2, PIK3CD) critical for metastasis.
+---
 
-    Clinical Drug Screening: * Integrated DGIdb and ChEMBL databases.
+## Key Findings
 
-        Constraint: Filtered for FDA-Approved status only to ensure clinical relevance.
+Regulatory Drivers
+CXCL8, CDK2, and PIK3CD identified as top-tier hub genes critical for metastatic regulation.
 
-💡 Key Findings
+Metastatic Pathways
+High enrichment in PI3K-Akt signaling, MAPK signaling, and Cytokine-cytokine receptor interaction.
 
-    Regulatory Drivers: CXCL8, CDK2, and PIK3CD were identified as top-tier hub genes.
+Therapeutic Candidates
+Dinaciclib and Dabrafenib identified as high-potential FDA-approved drug candidates
+via ChEMBL targeted screening of the dysregulated gene network.
 
-    Metastatic Pathways: High enrichment in PI3K-Akt signaling, MAPK signaling, and Cytokine-cytokine receptor interaction.
+---
 
-    Therapeutic Candidates: Utilizing ChEMBL for targeted screening identified Dinaciclib and Dabrafenib as high-potential FDA-approved drug candidates for the identified dysregulated network.
+## Tools & Databases
 
-🛠️ Tools & Databases
+| Category        | Tools                           |
+|-----------------|---------------------------------|
+| Computational   | Microsoft Excel, Python / R     |
+| Databases       | NCBI GEO, DAVID, KEGG           |
+| Drug Analysis   | DGIdb, ChEMBL                   |
 
-    Computational Tools: Microsoft Excel (Advanced filtering), Python/R (Optional script integration).
+---
 
-    Databases: NCBI GEO, DAVID, KEGG.
+## Author
 
-    Drug Analysis: DGIdb, ChEMBL (High-fidelity clinical drug data).
-
-Author
-
-Amna Asghar BS Bioinformatics | National Centre for Bioinformatics
-
-Focus: RNA_Seq Analysis 
-
-Connect: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amna-asghar-030771274)
-
+Amna Asghar
+BS Bioinformatics — National Centre for Bioinformatics
+Focus: RNA-Seq Analysis
+https://www.linkedin.com/in/amna-asghar-030771274
