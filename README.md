@@ -1,103 +1,57 @@
-RNA-Seq Bioinformatics Pipeline for Metastatic Melanoma
-Project Overview
+🧬 Metastatic Melanoma: Integrative RNA-Seq & Drug Repurposing Pipeline
 
-This project presents an integrative bioinformatics pipeline developed to analyze transcriptomic data from metastatic melanoma samples. The aim of the study is to identify differentially expressed genes (DEGs), key regulatory pathways, and potential therapeutic targets using publicly available RNA-seq datasets.
+This project presents a comprehensive bioinformatics workflow developed to analyze transcriptomic data from metastatic melanoma. By integrating differential expression analysis with clinical drug databases, the study identifies high-confidence therapeutic targets and FDA-approved candidates for precision oncology.
+📊 Dataset Detail
 
-The analysis was performed using the GSE46517 dataset from the NCBI Gene Expression Omnibus (GEO).
+    Dataset ID: GSE46517
 
-Dataset
+    Source: NCBI Gene Expression Omnibus (GEO)
 
-Dataset ID: GSE46517
-Source: NCBI GEO
+    Description: Gene expression profiles of metastatic melanoma progression models.
 
-The dataset contains gene expression profiles representing different stages of melanoma progression, enabling the study of molecular changes associated with metastasis.
+🚀 The Pipeline
 
-Research Objectives
+The workflow was executed using a combination of statistical filtering and cross-database validation:
 
-Identify significantly up-regulated and down-regulated genes in metastatic melanoma.
+    Data Acquisition: Retrieval and preprocessing of transcriptomic profiles from GEO.
 
-Perform pathway enrichment analysis to understand the biological systems involved in disease progression.
+    Differential Expression Analysis (DEA):
 
-Identify hub genes that may play a major role in melanoma metastasis.
+        Thresholds: P-value<0.05 and ∣Log2​FC∣>2.
 
-Investigate drug–gene interactions to identify potential therapeutic targets.
+        Total Identified: 2,297 DEGs.
 
-Bioinformatics Pipeline
+    Functional Annotation: Gene ontology and functional analysis via DAVID.
 
-The analysis workflow consists of the following stages:
+    Pathway Mapping: Identifying systemic dysregulation through KEGG pathways.
 
-Data Acquisition
+    Target Identification: Isolation of "Hub Genes" (e.g., CXCL8, CDK2, PIK3CD) critical for metastasis.
 
-Retrieval of transcriptomic dataset from the GEO database.
+    Clinical Drug Screening: * Integrated DGIdb and ChEMBL databases.
 
-Differential Gene Expression Analysis
+        Constraint: Filtered for FDA-Approved status only to ensure clinical relevance.
 
-Statistical filtering using criteria:
+💡 Key Findings
 
-P-value < 0.05
+    Regulatory Drivers: CXCL8, CDK2, and PIK3CD were identified as top-tier hub genes.
 
-|LogFC| > 1
+    Metastatic Pathways: High enrichment in PI3K-Akt signaling, MAPK signaling, and Cytokine-cytokine receptor interaction.
 
-Gene Categorization
+    Therapeutic Candidates: Utilizing ChEMBL for targeted screening identified Dinaciclib and Dabrafenib as high-potential FDA-approved drug candidates for the identified dysregulated network.
 
-Identification of up-regulated and down-regulated genes.
+🛠️ Tools & Databases
 
-Functional Annotation
+    Computational Tools: Microsoft Excel (Advanced filtering), Python/R (Optional script integration).
 
-Gene functional analysis using the DAVID bioinformatics tool.
+    Databases: NCBI GEO, DAVID, KEGG.
 
-Pathway Enrichment Analysis
-
-Mapping genes to KEGG biological pathways.
-
-Hub Gene Identification
-
-Selection of genes strongly associated with melanoma progression.
-
-Drug–Gene Interaction Analysis
-
-Screening DGIdb to identify FDA-approved drugs targeting key genes.
-
-Key Findings
-
-2,297 differentially expressed genes (DEGs) were identified.
-
-Several genes including CXCL8, CDK2, and PIK3CD emerged as potential regulatory drivers.
-
-Significant enrichment was observed in the following pathways:
-
-PI3K-Akt signaling pathway
-
-MAPK signaling pathway
-
-Cytokine signaling pathways
-
-Pathways in cancer
-
-Drug interaction analysis identified Dinaciclib and Dabrafenib as potential therapeutic candidates targeting dysregulated genes.
-
-Significance of the Study
-
-This project demonstrates how bioinformatics approaches can be applied to precision oncology by linking gene expression patterns with biological pathways and potential drug targets.
-
-The pipeline provides insights into:
-
-Molecular mechanisms driving melanoma metastasis
-
-Candidate biomarkers for disease progression
-
-Potential targets for therapeutic intervention
-
-Tools & Databases Used
-
-- NCBI GEO (Dataset source)
-- DAVID Functional Annotation Tool
-- KEGG Pathway Database
-- DGIdb (Drug Gene Interaction Database)
-- Microsoft Excel (Data organization and filtering)
+    Drug Analysis: DGIdb, ChEMBL (High-fidelity clinical drug data).
 
 Author
 
-Amna Asghar  
-BS Bioinformatics  
-National Centre for Bioinformatics
+Amna Asghar BS Bioinformatics | National Centre for Bioinformatics
+
+Focus: RNA_Seq Analysis 
+
+Connect: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amna-asghar-030771274)
+
