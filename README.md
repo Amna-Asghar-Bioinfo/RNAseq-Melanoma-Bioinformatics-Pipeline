@@ -69,5 +69,7 @@ via ChEMBL targeted screening of the dysregulated gene network.
 
 Amna Asghar
 BS Bioinformatics — National Centre for Bioinformatics
+
 Focus: RNA-Seq Analysis
+
 https://www.linkedin.com/in/amna-asghar-030771274
